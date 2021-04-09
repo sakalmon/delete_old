@@ -30,7 +30,7 @@ for file in os.listdir(path):
         difference = now - file_date
         
         if difference.days > LIMIT:
-            print(os.path.join(path, file), end=' ')
+            print(os.path.join(path, file))
             mbytes_deleted += os.stat(os.path.join(path, file)).st_size / 1000000
 
 print(mbytes_deleted)
