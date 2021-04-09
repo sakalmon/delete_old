@@ -10,11 +10,6 @@ file =  'Mames_2021-04-07_11-00-01.db'
 full_path = os.path.join(path, file)
 
 now = datetime.datetime.now()
-yesterday = datetime.datetime(2021, 3, 23)
-difference = now - yesterday
-print(now)
-print(yesterday)
-print(difference.days)
 
 regex = re.compile(r'(20\d\d)-(\d\d)-(\d\d)_(\d\d)-(\d\d)-(\d\d)')
 matches = []
@@ -33,6 +28,6 @@ for file in os.listdir(path):
         second = int(match.group(6))
 
         file_date = datetime.datetime(year, month, day, hour=hour, minute=minute, second=second)
-        print(file_date)
+        print(now - file_date)
         
 
