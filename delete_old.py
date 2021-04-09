@@ -32,7 +32,9 @@ for file in os.listdir(path):
         
         if difference.days > LIMIT:
             count += 1
-            print(os.path.join(path, file))
+            file_to_delete = os.path.join(path, file)
+            print(file_to_delete)
+            #os.remove(os.path.join(path, file))
             mbytes_deleted += os.stat(os.path.join(path, file)).st_size / 1000000
 
 print(f'{count} files deleted ({round(mbytes_deleted)}MB).')
