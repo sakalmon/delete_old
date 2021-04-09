@@ -15,3 +15,13 @@ difference = now - yesterday
 print(now)
 print(yesterday)
 print(difference.days)
+
+regex = re.compile(r'(20\d\d)-(\d\d)-(\d\d)')
+matches = []
+
+for file in os.path.listdir(path):
+    if regex.search(file):
+        matches.append(regex.search(file))
+
+for match in matches:
+    print(match)
