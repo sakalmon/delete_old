@@ -20,8 +20,8 @@ regex = re.compile(r'(20\d\d)-(\d\d)-(\d\d)')
 matches = []
 
 for file in os.listdir(path):
-    if regex.search(file):
-        matches.append(regex.search(file))
+    if regex.match(file):
+        matches.append(regex.match(file))
 
 for match in matches:
-    print(match.match)
+    print(match.group(0), match.group(1), match.group(2))
