@@ -16,7 +16,7 @@ print(now)
 print(yesterday)
 print(difference.days)
 
-regex = re.compile(r'(20\d\d)-(\d\d)-(\d\d)_(\d\d)_(\d\d)_(\d\d)')
+regex = re.compile(r'(20\d\d)-(\d\d)-(\d\d)_(\d\d)-(\d\d)-(\d\d)')
 matches = []
 
 for file in os.listdir(path):
