@@ -28,11 +28,11 @@ for file in os.listdir(path):
         year = int(match.group(1))
         month = int(match.group(2))
         day = int(match.group(3))
-        hours = int(match.group(4))
-        minutes = int(match.group(5))
-        seconds = int(match.group(6))
+        hour = int(match.group(4))
+        minute = int(match.group(5))
+        second = int(match.group(6))
 
-        file_date = datetime.datetime(year, month, day, hours, minutes, seconds)
+        file_date = datetime.datetime(year, month, day, hour=hour, minute=minute, second=second)
         print(file_date)
         
 
