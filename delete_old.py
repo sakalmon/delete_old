@@ -19,7 +19,7 @@ print(difference.days)
 regex = re.compile(r'(20\d\d)-(\d\d)-(\d\d)')
 matches = []
 
-for file in os.path.listdir(path):
+for file in os.listdir(path):
     if regex.search(file):
         matches.append(regex.search(file))
 
