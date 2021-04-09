@@ -30,7 +30,7 @@ for file in os.listdir(path):
         file_date = datetime.datetime(year, month, day, hour=hour, minute=minute, second=second)
         difference = now - file_date
         
-        if difference.days > 14:
+        if difference.days >= 14:
             print(file)
         
 
