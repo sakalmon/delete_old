@@ -1,20 +1,17 @@
 import os
-import pathlib
 import re
 import datetime
 
 
 path = '/home/steam/Backups/Valheim'
 
-today = datetime.date.today()
-today_string = today.strftime('%Y-%m-%d')
-regex = re.compile(today_string))
+file =  'Mames_2021-04-07_11-00-01.db'
 
-matches = []
+full_path = os.path.join(path, file)
 
-for file in os.listdir(path):
-	if regex.search(file):
-		matches.append(file)
-
-print(today.strftime('%Y-%m-%d'))
-print(today_string)
+now = datetime.datetime.now()
+yesterday = datetime.datetime(2021, 3, 23)
+difference = now - yesterday
+print(now)
+print(yesterday)
+print(difference.days)
