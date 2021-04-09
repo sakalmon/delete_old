@@ -30,7 +30,7 @@ for file in os.listdir(path):
         
         if difference.days > LIMIT:
             print(os.path.join(path, file), end=' ')
-            print(os.stat(os.path.join(path, file)))
+            print(os.stat(os.path.join(path, file)).st_size)
 
 
         
