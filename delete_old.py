@@ -35,7 +35,7 @@ for file in os.listdir(path):
             print(os.path.join(path, file))
             mbytes_deleted += os.stat(os.path.join(path, file)).st_size / 1000000
 
-print(f'{count} files deleted ({round(mbytes_deleted)}MB.)')
+print(f'{count} files deleted ({round(mbytes_deleted)}MB).')
 
 
 
