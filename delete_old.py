@@ -38,8 +38,8 @@ for file in os.listdir(path):
                 os.remove(file_to_delete)
                 print(file_to_delete + ' deleted.')
 
-            mbytes_deleted += os.stat(file_to_delete).st_size / 1000000 # Get size of file and convert to Megabytes
-            mbytes_deleted = round(mbytes_deleted)
+                mbytes_deleted += os.stat(file_to_delete).st_size / 1000000 # Get size of file and convert to Megabytes
+                mbytes_deleted = round(mbytes_deleted)
 
 print(f'{count} files deleted ({mbytes_deleted}MB)')
 
