@@ -22,12 +22,12 @@ matches = []
 for file in os.listdir(path):
 
     if regex.search(file):
-        
+
         match = regex.search(file)
         
-        year = match.group(1)
-        month = match.group(2)
-        day = match.group(3)
+        year = int(match.group(1))
+        month = int(match.group(2))
+        day = int(match.group(3))
 
         file_date = datetime.datetime(year, month, day)
         print(year, month, day)
