@@ -12,6 +12,7 @@ now = datetime.datetime.now()
 regex = re.compile(r'(20\d\d)-(\d\d)-(\d\d)_(\d\d)-(\d\d)-(\d\d)')
 matches = []
 mbytes_deleted = 0
+count = 0
 
 for file in os.listdir(path):
 
@@ -30,10 +31,11 @@ for file in os.listdir(path):
         difference = now - file_date
         
         if difference.days > LIMIT:
+            count += 1
             print(os.path.join(path, file))
             mbytes_deleted += os.stat(os.path.join(path, file)).st_size / 1000000
 
-print(round(mbytes_deleted))
+print(f'{count} files deleted totalling {round(mbytes_deleted)}MB')
 
 
 
