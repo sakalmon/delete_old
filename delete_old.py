@@ -28,6 +28,6 @@ for file in os.listdir(path):
         second = int(match.group(6))
 
         file_date = datetime.datetime(year, month, day, hour=hour, minute=minute, second=second)
-        print(now - file_date)
+        print((now - file_date).days)
         
 
