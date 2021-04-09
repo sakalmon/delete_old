@@ -3,9 +3,9 @@ import re
 import datetime
 
 
-path = '/home/steam/Backups/Valheim'
+LIMIT = 14
 
-file =  'Mames_2021-04-07_11-00-01.db'
+path = '/home/steam/Backups/Valheim'
 
 full_path = os.path.join(path, file)
 
@@ -30,7 +30,8 @@ for file in os.listdir(path):
         file_date = datetime.datetime(year, month, day, hour=hour, minute=minute, second=second)
         difference = now - file_date
         
-        if difference.days > 14:
-            print(file)
+        if difference.days > LIMIT:
+            print(os.path.join(path, file))
+
         
 
