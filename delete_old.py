@@ -30,6 +30,6 @@ for file in os.listdir(path):
         day = int(match.group(3))
 
         file_date = datetime.datetime(year, month, day)
-        print(year, month, day)
+        print(file_date)
         
 
