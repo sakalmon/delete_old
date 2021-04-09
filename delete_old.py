@@ -24,4 +24,4 @@ for file in os.listdir(path):
         matches.append(regex.search(file))
 
 for match in matches:
-    print(match)
+    print(match.match)
