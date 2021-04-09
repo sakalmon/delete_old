@@ -29,7 +29,9 @@ for file in os.listdir(path):
         difference = now - file_date
         
         if difference.days > LIMIT:
-            print(os.path.join(path, file))
+            print(os.path.join(path, file), end=' ')
+            print(os.stat(os.path.join(path, file)))
+
 
         
 
