@@ -7,8 +7,6 @@ LIMIT = 14
 
 path = '/home/steam/Backups/Valheim'
 
-full_path = os.path.join(path, file)
-
 now = datetime.datetime.now()
 
 regex = re.compile(r'(20\d\d)-(\d\d)-(\d\d)_(\d\d)-(\d\d)-(\d\d)')
