@@ -20,8 +20,14 @@ regex = re.compile(r'(20\d\d)-(\d\d)-(\d\d)')
 matches = []
 
 for file in os.listdir(path):
-    if regex.search(file):
-        matches.append(regex.search(file))
 
-for match in matches:
-    print(match.group(1), match.group(2), match.group(3))
+    if regex.search(file):
+        
+        year = match.group(1)
+        month = match.group(2)
+        day = match.group(3)
+
+        file_date = datetime.datetime(year, month, day)
+        print(year, month, day)
+        
+
