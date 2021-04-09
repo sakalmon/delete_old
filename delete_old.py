@@ -23,6 +23,8 @@ for file in os.listdir(path):
 
     if regex.search(file):
         
+        match = regex.search(file)
+        
         year = match.group(1)
         month = match.group(2)
         day = match.group(3)
